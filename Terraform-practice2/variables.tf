@@ -6,11 +6,6 @@ variable "az" {
   
 }
 
-variable "region" {
-    description = "define auto region"
-    type = list
-  
-}
 
 
 variable "key_name" {
@@ -71,13 +66,4 @@ variable "instance_type" {
 
 }
 
-variable "aws_regions" {
-  description = "defines automatically"
-  type        = string
-}
 
-#variable "aws_region" {
-  #description = "define auto region"
-  #type        = string
-
-#}

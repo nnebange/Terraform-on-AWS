@@ -33,6 +33,10 @@ data "aws_ami" "amazon_linux" {
 
 }
 
+data "aws_region" "current" {}
+
+
+
 
 #create an Ec2 instance of type Amazon
 
@@ -43,8 +47,8 @@ resource "aws_instance" "Amazon_linux2_instance" {
   security_groups   = ["allow_ssh", "allow_web_sg", "allow_mysql"]
   key_name          = var.key_name
   tags = {
-    "Name" = var.az[1]
-    "Name" = var.region[2]
+    "name" = var.az[1]
+    "Name" = data.aws_region.current.name                #var.region[2]
   }
 
 }
