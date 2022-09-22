@@ -1,7 +1,7 @@
 
 #main.tf for count meta argument
 
-resource "aws_iam_user" "clovis" {
+resource "aws_iam_user" "cloviss" {
   count = "${length(var.username)}"
   name = "${element(var.username,count.index )}"
 }
