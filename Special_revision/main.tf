@@ -98,5 +98,32 @@ resource "aws_security_group" "allow_mysql" {
 }
 
 
+#vpc creation
 
+resource "aws_vpc" "Clovis_VPC" {
+  cidr_block = "10.123.0.0/16"
+  tags = {
+    "Name" = "Clovis_VPC"
+  }
+
+}
+
+#vpc creation
+
+resource "aws_vpc" "Clovis_VPC" {
+  cidr_block = "10.123.0.0/16"
+  tags = {
+    "Name" = "Clovis_VPC"
+  }
+
+}
+#vpc creation
+
+resource "aws_vpc" "Clovis_VPC" {
+  cidr_block = "10.123.0.0/16"
+  tags = {
+    "Name" = "Clovis_VPC"
+  }
+
+}
 
